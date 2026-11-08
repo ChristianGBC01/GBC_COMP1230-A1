@@ -28,9 +28,9 @@ require 'header.php';
         </tr>
         <tr>
             <td>Miguel Vargas</td>
-            <td>[Teammate 3 Student ID]</td>
-            <td><a href="https://[teammate3_username].gblearn.com/comp1230/assignments/project/">Copy</a></td>
-            <td><a href="aud-phase1.pdf">Phase 1 AI Declaration</a></td>
+            <td>101630473</td>
+            <td><a href="https://f6630473.gblearn.com/comp1230/assignments/project/">Copy</a></td>
+            <td><a href="AI-Declaration-Form">Phase 1 AI Declaration</a></td>
         </tr>
         </tbody>
     </table>

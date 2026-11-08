@@ -1,12 +1,12 @@
 <?php
-require 'header.php';
+session_start();
 $pdo = require 'db.php';
 
 $error = '';
 $username = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username']?? '';
-    $password = $_POST['password']?? '';
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
 
     $stmt = $pdo->prepare("SELECT id, display_name, password_hash FROM users WHERE username = ?");
     $stmt->execute([$username]);
@@ -19,9 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: index.php");
         exit;
     } else {
-        $error = "Username or password are incorrect.";
+        $error = "Username or password is incorrect.";
     }
 }
+
+require 'header.php';
 ?>
 
     <h1>Log in</h1>
